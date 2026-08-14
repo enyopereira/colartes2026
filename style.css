@@ -1,3 +1,14 @@
+#eduplayFrame {
+  position: fixed;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  z-index: 1;
+}
+
 #botaoIniciar {
   display: none;
   position: fixed;
@@ -10,20 +21,19 @@
   height: 20px;
   padding: 0;
 
-  /* Sem borda */
   border: none;
   border-radius: 10px;
 
   /* Fundo branco com 30% de opacidade */
   background-color: rgba(255, 255, 255, 0.3);
-
-  /* Texto permanece totalmente visível */
-  color: #ffffff;
+  color: #000000;
 
   font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: bold;
 
   cursor: pointer;
+
+  /* Mantém o botão acima do vídeo */
   z-index: 9999;
 }
