@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TVDi - Educação Sonora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <h1>O ouvido que aprende</h1>
+        <p>Protótipo de educação sonora para TV Digital Interativa</p>
+      </div>
+      <div class="score-box">
+        <span>PONTOS</span>
+        <strong id="score">0</strong>
+      </div>
+    </header>
+
+    <section class="video-stage">
+      <iframe
+        id="eduplayFrame"
+        src="https://eduplay.rnp.br/portal/video/embed/SEU_ID"
+        title="Vídeo da aula"
+        allow="autoplay; fullscreen"
+        allowfullscreen>
+      </iframe>
+
+      <div id="shade" class="shade hidden"></div>
+
+      <section id="quiz" class="quiz hidden">
+        <p class="eyebrow">PAUSA PEDAGÓGICA</p>
+        <h2>Qual atitude representa uma escuta consciente?</h2>
+
+        <div class="options">
+          <button class="option focused" data-index="0">
+            <span class="letter">A</span>
+            <span>Apenas perceber que existe um som</span>
+          </button>
+
+          <button class="option" data-index="1">
+            <span class="letter">B</span>
+            <span>Direcionar a atenção para os detalhes do som</span>
+          </button>
+        </div>
+
+        <p class="controls">← → escolher &nbsp;&nbsp; ENTER confirmar</p>
+      </section>
+
+      <section id="feedback" class="feedback hidden">
+        <div id="feedbackIcon" class="feedback-icon">✓</div>
+        <h2 id="feedbackTitle">Resposta correta</h2>
+        <p id="feedbackText"></p>
+        <button id="continueBtn" class="continue-btn focused">CONTINUAR</button>
+        <p class="controls">ENTER continuar</p>
+      </section>
+    </section>
+
+    <footer class="footer">
+      <span>↑ ↓ ← → navegar</span>
+      <span>ENTER selecionar</span>
+      <span>R reiniciar</span>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
